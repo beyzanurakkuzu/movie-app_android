@@ -12,23 +12,23 @@ import retrofit2.http.Query
 
 interface ApiInterface {
 
-    @GET("movie/popular?language=es-MX")
+    @GET("movie/popular")
     suspend fun getMoviesPopular(@Query("page") page: Int): Movies
 
-    @GET("movie/now_playing?language=es-MX")
+    @GET("movie/now_playing")
     suspend fun getMoviesNowPlaying(@Query("page") page: Int): Movies
 
-    @GET("movie/{movie_id}?language=es-MX")
+    @GET("movie/{movie_id}")
     suspend fun getMovieDetail(@Path("movie_id") movie_id: Int): MovieDetail
 
-    @GET("movie/{movie_id}/videos?language=es-MX")
+    @GET("movie/{movie_id}/videos")
     suspend fun getMovieTrailers(@Path("movie_id") movie_id: Int): Trailers
 
-    @Headers("Cache-Control: public, max-stale=2419200") // 4 weeks
+    @Headers("Cache-Control: public, max-stale=2419200")
     @GET("configuration")
     suspend fun getConfiguration(): Configurations
 
-    @GET("genre/movie/list?language=es-MX")
+    @GET("genre/movie/list")
     suspend fun getGenre(): GenresResponse
 
 }

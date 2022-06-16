@@ -14,7 +14,7 @@ import com.beyzaakkuzu.movieapp.android.ui.MainActivity
 abstract class BaseFragment<DB: ViewDataBinding>:Fragment() {
     var main:MainActivity?=null
 
-    protected lateinit var viewBinding:DB
+    private lateinit var viewBinding:DB
 
     @LayoutRes
     abstract fun getLayoutRes():Int
@@ -31,6 +31,5 @@ abstract class BaseFragment<DB: ViewDataBinding>:Fragment() {
     ): View? {
         viewBinding = DataBindingUtil.inflate(inflater, getLayoutRes(), container, false)
         return viewBinding.root
-
     }
 }

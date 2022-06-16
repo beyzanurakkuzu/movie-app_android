@@ -2,4 +2,8 @@
     <string name="app_name">MovieAppAndroid</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="apikey" translatable="false">824cb4ef6b616324e39b8c069fdf0462</string>
+    <string name="baseurl" translatable="false">https://api.themoviedb.org/3</string>
+    <string name="only_youtube">Only youtube videos can be played</string>
 </resources>

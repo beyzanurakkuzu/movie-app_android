@@ -50,6 +50,9 @@ android {
     dataBinding {
         enabled = true
     }
+    viewBinding{
+        enabled=true
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -114,6 +117,9 @@ dependencies {
 
     //Lottie Anim
     implementation "com.airbnb.android:lottie:3.5.0"
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 
 }
